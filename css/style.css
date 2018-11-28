@@ -1,0 +1,944 @@
+
+/*===========================================  css rest start  ================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+  /* background-color: #ADADAD; */
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+  --main-color: #D9B443;
+  --sec-color: #DD6B45;
+  --dark-gray:#D6D6D6;
+}
+/*===========================================  css rest end  ================================= */
+
+
+
+/*===========================================  Home Section START  ================================= */
+
+/*===========================================  nav bar start ================================= */
+
+.logo {
+  font-family: 'Pinyon Script';
+    font-size: 3em;
+    color: var(--main-color);
+   }
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+.content {
+  height: 200vh;
+  background-image: url(//unsplash.it/1000/1000);
+  background-color: red;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: grid;
+}
+
+/* navigation styles start here */
+
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 0.5rem;
+  padding-left: 5%;
+  background-color: #C4C4C4;
+  background: linear-gradient(to right,rgba(127, 127, 127, 0.63) , rgba(127, 127, 127, 0.63));
+  
+}
+
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 85%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: #000;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  left: 0;
+  background: rgba(127, 127, 127, 0.63);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding: 0.5rem;
+  font-size: 1.5em;
+
+}
+
+nav a {
+  font-size: 1em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.container {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+}
+
+/*===========================================  nav bar END ================================= */
+
+
+ 
+#home-body {
+background-image: url("../images/tomasz-biskup-667305-unsplash.jpg");
+background: linear-gradient(to right,#212121 , transparent),
+      url("../images/tomasz-biskup-667305-unsplash.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-attachment: fixed;
+    height: 100vh;
+    display: grid;
+}
+
+#home-content {
+  color: #F4F4F4;
+    width: 50vw;
+    height: 30vh;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;  
+    width: 100%;
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+#home-header h1 {
+    font-size: 4em;
+
+}
+
+#home-header p {
+    font-size: 1.6em;
+    color: #C4C4C4;
+}
+
+#home-btns-container {
+    margin: 4.5rem 2rem 2rem 2rem;
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+#home-btns-container a {
+    padding: 1rem;
+    color: #EDEDED;
+}
+
+ a#first-btn {
+    background-color: var(--sec-color);
+    border: 2px #F4F4F4 solid;
+    padding: 1rem 4rem;
+    /* margin: 0 1rem;; */
+    padding: 1.5rem 4rem;
+}
+
+ a#second-btn {
+    background-color: transparent;
+    border: 2px #F4F4F4 solid;
+    margin-top: 1rem;
+    padding: 1.5rem;
+}
+
+
+#about {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: var(--dark-gray);
+}
+#about-header {
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+  background-color: var(--main-color);
+}
+
+#about-us-img {
+  width: 100vw;
+  height: 50vh;
+}
+
+.about-us-info {
+  padding: 1em;
+  color: #F4F4F4;
+  position: relative;
+  /* top: -100px; */
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* =================================================== gallary ============================== */
+
+
+
+/* * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; } */
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 100%;
+  height: 200px;
+  margin-right: 10px;
+  background: var(--sec-color);
+  counter-increment: gallery-cell;
+}
+
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+/* position dots in gallery */
+.flickity-page-dots {
+  bottom: 0px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+.review-card {
+ margin-top: 5%;
+   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.review-name {
+margin-bottom: 5%;
+font-size: 1.5em;
+}
+.review {
+  margin-bottom: 5%;
+  font-size: 1.1em;
+}
+.review-stars {
+color: gold;
+}
+
+.review-img {
+width: 25vh;
+}
+
+#gallery-sec {
+  padding-top: 3rem;
+  background-image: url("../images/backdrop-21534_1920.jpg");
+  background: linear-gradient(to right,rgba(44, 42, 42, 0.7) , rgba(44, 42, 42, 0.7)),
+        url("../images/backdrop-21534_1920.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+
+      display: grid;
+}
+
+#gallery-h1{
+width: 100%;
+  background: var(--main-color);
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+}
+
+#gallery-img-container {
+  padding: 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+.gallery-img {
+  width: 100%;
+}
+
+
+.d-none {
+  display: none;
+}
+
+
+#packages-sec{
+  padding-top: 3rem;
+  background-color: var(--dark-gray);
+}
+#package-header{
+  width: 100%;
+  background: var(--main-color);
+  padding: 20px;
+  font-size: 2em;
+  text-align: center;
+  /* background-color: var(--main-color);
+  padding: 60px 20px 20px 20px;
+  font-size: 2em;
+  text-align: center;
+  width: 100%; */
+}
+
+.packages {
+  display: flex;
+  flex-direction: column;
+}
+
+.pack {
+  border: 2px solid black;
+  background-color: #fff;
+  width: 95vw;
+  height: 30rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  border: 2px solid darkgray;
+  width: 90vw;
+  height: 23rem;
+  margin: 1rem auto;
+}
+
+.learn-more-btn {
+  background-color: var(--sec-color);
+  padding: 1.5rem;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+
+
+.info ul {
+  font-size: 2rem;
+
+}
+
+
+
+
+/*===========================================  Home Section END  ================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================================  media querys  ================================= */
+
+
+
+@media screen and (min-width:  546px) { 
+    #home-content {
+        margin-bottom: 10rem;
+        width: 50vw;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        grid-column: 1 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+
+
+
+   #home-btns-container {
+         margin: 0px;
+         display: flex;
+         flex-direction: row;
+         font-size: 1.5em;
+         
+     }
+
+ 
+     #home-btns-container {
+         margin-top: 5%;
+     }
+
+ 
+       a#first-btn {
+         padding: 1rem 4rem;
+     
+     } 
+     
+     a#second-btn {
+         margin: 5%;
+         padding: 1rem;
+     } 
+     .about-us-info {
+      font-size: 1.7em;
+      top: -100px;
+
+    }
+     .review-card {
+      margin: 0.5rem 2.5rem;
+     }
+     
+     .review-name {
+     margin-bottom: 2%;
+     font-size: 2em;
+     }
+     .review {
+       margin-bottom: 2%;
+       font-size: 1.5em;
+     }
+     .review-stars {
+     font-size: 1.7em;     }
+     
+     .review-img {
+     width: 30vh;
+     }
+     
+  
+ 
+     .gallery-img {
+      width: 80%;
+      margin: 1.5rem auto;
+    
+    }
+.pack {
+  width: 80%;
+  height: 40rem;
+  margin: 1.5rem auto;
+}
+.info {
+  width: 95%;
+  height: 30rem;
+  margin: 1rem auto;
+}
+  }
+
+
+
+
+
+
+/* Medium devices (tablets, 768px and above)*/
+
+
+@media screen and (min-width: 850px) {
+    .nav-toggle-label {
+      display: none;
+    }
+  
+    header {
+      display: flex;
+      margin: 0 auto;
+      padding: 0.5rem 0;
+    }
+    
+    .logo {
+    margin-left: 2rem;
+    }
+    
+    nav {
+      all: unset;
+      /* grid-column: 3 / 5; */
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    
+      flex-grow: 1;
+      margin-right: 1em;
+    }
+    
+    nav ul {
+      display: flex;
+    }
+    
+    nav li {
+      margin-left: 3em;
+      margin-bottom: 0;
+    }
+    
+    nav a {
+      opacity: 1;
+      position: relative;
+    }
+    
+    nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      position: absolute;
+      background: var(--main-color);
+      top: -.75em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+    }
+    
+    nav a:hover::before {
+      transform: scale(1,1);
+    }
+  
+
+  #home-content {
+    height: 50vh;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #home-content h1 {
+      margin-bottom: 1.5%
+  }
+
+  #home-btns-container {
+    margin: 5%;
+    font-size: 1.5em;
+    
+}
+
+
+a#first-btn {
+    padding: 1.5rem 4rem;
+
+} 
+
+a#second-btn {
+    padding: 1.5rem;
+} 
+
+.review-card {
+  margin: 0.5rem 1rem;
+ }
+
+
+.gallery-img {
+ width: 80%;
+ margin: 1.5rem auto;
+
+}
+
+}
+
+
+
+
+  /* Large devices (desktops, 992px and above)*/
+
+  @media screen and (min-width: 992px) { 
+
+    #home-content {
+        width: 80%;
+      }
+   
+
+    #home-btns-container {
+        margin: 0;
+        font-size: 1.5em;
+        
+    }
+
+
+    #about-header {
+      padding: 20px;
+      font-size: 3em;
+      text-align: center;
+    width: 80vw;
+    margin: 0 auto;
+      background-color: chocolate;
+    }
+    
+    #about-us-img {
+      all: unset;
+      width: 85vw;
+     margin: 0 auto;
+    }
+    
+    .about-us-info {
+      background: #EEE;
+      position: relative;
+      font-size: 2em;
+      top: -150px;
+      width: 70vh;
+      margin: 0 auto;
+    }
+
+    #review-car {
+      width: 70%;
+      margin: 0 auto;
+    }
+    
+    .d-none1{
+    all: unset;
+    }
+
+    #gallery-h1{
+      padding: 60px 20px 20px 20px;
+    }
+ 
+    .gallery-img {
+ width: 30%;
+ height: 30%;
+     margin: 1rem ;
+   
+   }
+
+.packages {
+  flex-direction: row;
+  justify-content: center;
+}
+
+   .pack {
+    width: 30%;
+    height: 30%;
+    margin: 1rem;
+   }
+
+   
+}
+
+
+
+
+/* Extra large devices (large desktops, 1200px and above) */
+
+@media screen and  (min-width: 1200px) { 
+
+
+     header {
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+     }
+    
+     .logo {
+      grid-column: 1 / 3;
+      margin: 0 25%;
+     }
+    
+     nav {
+      all: unset;
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+     }
+    
+     nav ul {
+      display: flex;
+     }
+    
+     nav li {
+     margin-left: 3em;
+      margin-bottom: 0;
+     }
+    
+     nav a {
+      opacity: 1;
+      position: relative;
+      font-size: 0.8em;
+     }
+    
+     nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      background: var(--main-color);
+      position: absolute;
+      top: -.75em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+     }
+    
+      nav a:hover::before {
+      transform: scale(1,1);
+     }
+  
+     #home-content {
+        width: 50%;
+        margin: 0 5%;
+      }
+ 
+  .about-us-info {
+   font-size: 1.7em;
+   top: -100px;
+
+ }
+
+
+ #about-header {
+  padding: 60px 20px 20px 20px;
+  font-size: 3em;
+  text-align: end;
+width: 50vw;
+margin: 0 auto;
+  background-color: var(--main-color);
+}
+
+#about-us-img {
+  all: unset;
+  width: 40vw;
+  margin: 1rem 0;
+}
+
+.about-company-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-info {
+  all: unset;
+  color: white;
+  font-size: 1.8em;
+  text-align: center;
+width: 45%;
+margin: 1rem;
+position: relative;
+/* left: -5rem; */
+/* margin-left: 40%; */
+}
+
+
+#review-car {
+  width: 70%;
+  margin: 0 auto;
+}
+.gallery-img {
+  width: 30%;
+  height: 30%;
+  margin: 1rem auto;
+    
+}
+.pack {
+  width: 25%;
+  height: 35rem;
+  margin: 2rem;
+}
+.info {
+  width: 95%;
+  height: 25rem;
+  margin: 1rem auto;
+}
+
+#gallery-h1{ 
+  padding: 60px 20px 20px 20px;
+  font-size: 3em;
+  text-align: end;
+width: 50vw;
+margin: 0rem auto;
+  background-color: var(--main-color);
+}
+
+#package-header {
+  padding: 60px 20px 20px 20px;
+  font-size: 3em;
+  text-align: end;
+width: 50vw;
+margin: 0rem auto;
+  background-color: var(--main-color);
+}
+
+}
+
+
+
+
+
